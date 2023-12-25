@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    body {
+        background-color: pink
+    }
+
+    form {
+        text-align: center;
+        margin-top: 250px;
+
+    }
+
+    #Q {
+        font-size: 50px;
+    }
+
+    #ans_YES {
+        position: absolute;
+        left: 400px;
+        top: 350px;
+        text-align: center;
+    }
+
+    #ans_NO {
+        position: absolute;
+        left: 960px;
+        top:350px;
+        text-align: center;  
+    }
+    .button{
+        padding: 7px 16px;
+    }
+    #NONO{
+        position: absolute;
+    }
+
+    
+</style>
+
+<body>
+    <form action="#">
+        <h1 id="Q">
+            Do U love me ???
+        </h1>
+        <div id="ans_YES">
+            <input type="button" value="YES" onclick="Yes()" class="button">
+        </div>
+        <div id="ans_NO">
+            <input type="button" id="NONO" value="NO" onmouseover="Love()" class="button">
+        </div>
+    </form>
+</body>
+<script>
+    function Yes() {
+        alert(" <3  ");
+    }
+    function Love() {
+        let a = Math.round(Math.random() * window.innerWidth);
+        let b = Math.round(Math.random() * window.innerHeight);
+        document.getElementById("NONO").style.left = a + "px";
+        document.getElementById("NONO").style.top = b + "px";   
+    }
+</script>
+</html>

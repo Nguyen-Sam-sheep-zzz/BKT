@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+</body>
+<script>
+    var year = +prompt("Nhập số năm");
+    if (year % 4 == 0) {
+        if (year % 100 == 0) {
+            if (year % 400 == 0) {
+                alert("Năm nhuận");
+            }
+            else {
+                alert("Kp năm nhuận");
+            }
+        }
+        else {
+            alert("Năm nhuận");
+        }
+    }
+    else {
+        alert("Kp năm nhuận");
+    }
+</script>
+
+</html>

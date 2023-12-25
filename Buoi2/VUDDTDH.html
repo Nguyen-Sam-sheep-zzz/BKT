@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            font-size: 17px;
+            font-family: Arial, Helvetica, sans-serif;
+        }
+
+        input{
+            margin-left: 10px;
+        }    
+        #MV{
+            margin-left: 17px;
+        } 
+        #MTA{
+            margin-left: 17.5px;
+        }
+        #OP{
+            margin-left: 21px;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Tính điểm đại học khối D</h1>
+    <table id="select">
+        <tr>
+            <td>
+                Môn Toán  <input type="text" id="MT">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Môn Văn  <input type="text" id="MV">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Môn Anh  <input type="text" id="MTA">
+            </td>
+        </tr>
+        <tr>
+            <td>
+                Khu vực 
+                <select name="" id="OP">
+                    <option value="KV1">KV1</option>
+                    <option value="KV2">KV2</option>
+                    <option value="KV2-NT">KV2-NT</option>
+                    <option value="KV3">KV3</option>  
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td> <button onclick="TINHDIEM()">Tính Điểm</button></td>
+        </tr>
+    </table>
+    <div id="result"></div>
+</body>
+<script>
+function TINHDIEM() {
+    let A = +document.getElementById("MT").value;
+    let B = +document.getElementById("MV").value;
+    let C = +document.getElementById("MTA").value;
+    let sum = A + B + C;
+    console.log(A,B,C,sum);
+    let OP = document.getElementById("OP").value;
+    console.log(OP);
+    switch (OP) {
+        case "KV1":
+            document.getElementById("result").innerHTML= "Tổng điểm ĐH khối D của bạn là: " + (sum + 0.75);
+        break;
+        case "KV2":
+            document.getElementById("result").innerHTML= "Tổng điểm ĐH khối D của bạn là: " + (sum + 0.25);
+        break;
+        case "KV2-NT":
+            document.getElementById("result").innerHTML= "Tổng điểm ĐH khối D của bạn là: " + (sum + 0.5);
+        break;
+        case "KV3":
+            document.getElementById("result").innerHTML= "Tổng điểm ĐH khối D của bạn là: " + (sum);
+        break;
+    }
+}
+</script>
+</html>

@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<h1> Số đảo ngược</h1>
+<table>
+    <tr>
+        <td><input type="text" id="GG"></td>
+        <td><button onclick="run()">Run</button></td>
+    </tr>
+    <tr>
+        <td>
+            <p id="result"></p>
+        </td>
+    </tr>
+</table>
+
+<body>
+
+</body>
+<script>
+    function run() {
+        let a = +document.getElementById("GG").value;
+        let b = 0;
+        while (a > 0) {
+            b = (b* 10) + (a % 10);
+            a = Math.floor(a / 10);
+        }
+        document.getElementById("result").innerHTML = "số đảo ngược : " + b ;
+    }
+</script>
+
+</html>

@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <select name="HQ" id="CLHQ">
+        <option value="OI">Ổi</option>
+        <option value="DH">Dưa hấu</option>
+        <option value="Tao">Táo</option>
+        <option value="Xoai">Xoài</option>
+        <option value="Cam">Cam</option>
+        <option value="CC">Chôm chôm</option>
+        <option value="MC">Măng cụt</option>
+    </select>
+  <button onclick="NHQ()">Xem giá</button>
+  <div id="res"></div>
+</body>
+<script>
+   function NHQ() {
+    let check = document.getElementById("CLHQ").value;
+    switch( check ) {
+        case "OI":
+        case "DH":
+        document.getElementById("res").innerHTML = "20000 VNĐ/kg";
+        break;
+        case "Tao":
+        case "Xoai":
+        document.getElementById("res").innerHTML = "30000 VNĐ/kg";
+        break;
+        case "Cam":
+        case "CC":
+        document.getElementById("res").innerHTML = "40000 VNĐ/kg";
+        break;
+        case "MC":
+        document.getElementById("res").innerHTML = "50000 VNĐ/kg";
+        break;
+    }
+   }
+</script>
+</html>
